@@ -325,19 +325,21 @@ client.on('message', message => {
         .addField('resume', 'تكملة الاغنية')
         .addField('queue', 'اظهار قائمة التشغيل')
         .addField('np', 'اظهار الاغنية اللي انت مشغلها حاليا')
+	.setFooter('============================================')
+        .addField('dz!ghelp', 'اظهاراوامر العامة')
         .setFooter('by : AbdouFERSAOUI_Dz 👻็็็็็็็็็#5217')
       message.channel.send(helpEmbed);
     }
 });
 
 client.on('message', message => {
-    if (message.content === 'general_commands') {
+    if (message.content === 'dz!ghelp') {
         let helpEmbed = new Discord.RichEmbed()
         .setTitle('**أوامر عامة...**')
         .addField('avatar', "افاتار الشخص المطلوب")
         .addField('gif', 'البحث عن جيف انت تطلبه')
         .addField('ping', 'معرفة ping البوت')
-        .setFooter('المزيد قريبا ان شاء الله!')
+        .setFooter('by : AbdouFERSAOUI_Dz 👻็็็็็็็็็#5217')
       message.channel.send(helpEmbed);
     }
 });
