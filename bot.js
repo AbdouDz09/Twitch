@@ -1,41 +1,46 @@
-const Discord = require("discord.js");
+const Discord = require('discord.js');
 const client = new Discord.Client();
-var prefix = "c";
-var adminprefix = 'Y'
+const adminprefix = "s!w";
+const developers = ['472413769700474901'];
 
-const developers = ["472413769700474901"]
-client.on('message', message => {
-    var argresult = message.content.split(` `).slice(1).join(' ');
+console.log("BaRooooooD");
+
+client.on('ready', () => {
+    console.log(Logged as ${client.user.tag})
+})
+
+
+client.on('message', message => {//// حقوق @Fèarless | bÁrOd#0001
+    var argresult = message.content.split(`).slice(1).join(' ');
       if (!developers.includes(message.author.id)) return;
       
-  if (message.content.startsWith(adminprefix + 'setg')) {
+  if (message.content.startsWith(adminprefix + 'ply')) {
     client.user.setGame(argresult);
-      message.channel.send(`**✅   ${argresult}**`)
+      message.channel.send(تم تغيير البلاينق الى   ${argresult})
   } else 
      if (message.content === (adminprefix + "leave")) {
     message.guild.leave();        
   } else  
-  if (message.content.startsWith(adminprefix + 'setw')) {
+  if (message.content.startsWith(adminprefix + 'wt')) {
   client.user.setActivity(argresult, {type:'WATCHING'});
-      message.channel.send(`**✅   ${argresult}**`)
+      message.channel.send(تَم تغيير الواتشينق الى   ${argresult})
   } else 
-  if (message.content.startsWith(adminprefix + 'setl')) {
+  if (message.content.startsWith(adminprefix + 'ls')) {
   client.user.setActivity(argresult , {type:'LISTENING'});
-      message.channel.send(`**✅   ${argresult}**`)
-  } else 
-  if (message.content.startsWith(adminprefix + 'sets')) {
-    client.user.setGame(argresult, "https://www.twitch.tv/dream");
-      message.channel.send(`**✅**`)
+      message.channel.send(تَم تغيير الليسينينق الى   ${argresult})
+  } else
+  if (message.content.startsWith(adminprefix + 'st')) {
+    client.user.setGame(argresult, "https://www.twitch.tv/paaaaaartly");
+      message.channel.send(تم تغييرك حالتك بالتويتش الى   ${argresult})
   }
-  if (message.content.startsWith(adminprefix + 'setname')) {
+  if (message.content.startsWith(adminprefix + 'sn')) {
   client.user.setUsername(argresult).then
-      message.channel.send(`Changing The Name To ..**${argresult}** `)
+      message.channel.send(جاري تغيير الأسم لـ ..${argresult} )
 } else
-if (message.content.startsWith(adminprefix + 'setava')) {
+if (message.content.startsWith(adminprefix + 'sa')) {
   client.user.setAvatar(argresult);
-    message.channel.send(`Changing The Avatar To :**${argresult}** `);
+    message.channel.send(جاري تغيير الأفتار... : `);
 }
 });
-
 
 client.login(process.env.BOT_TOKEN);
