@@ -351,7 +351,7 @@ client.on('ready', () => {
       console.log(`ON ${client.guilds.size} Servers '     Script By : EX Clan ' `);
     console.log(`----------------`);
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`dz!help music ,`,"http://twitch.tv/abdoufersaoui_dz")
+client.user.setGame(`dz!help music ,`,"https://www.facebook.com/abdouFERSAOUI.20")
 client.user.setStatus("Dz")
 });
 
