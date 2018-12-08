@@ -316,17 +316,17 @@ client.on('message', message => {
     if (message.content === 'dz!help') {
         let helpEmbed = new Discord.RichEmbed()
         .setTitle('**أوامر الميوزك...**')
-        .setDescription('**أكتب هي (dz!) + :**')
-        .addField('play', 'لتشغيل اغنية')
-        .addField('join', 'دخول رومك الصوتي')
-        .addField('disconnect', 'الخروج من رومك الصوتي')
-        .addField('skip', 'تخطي الأغنية')
-        .addField('pause', 'ايقاف الاغنية مؤقتا')
-        .addField('resume', 'تكملة الاغنية')
-        .addField('queue', 'اظهار قائمة التشغيل')
-        .addField('np', 'اظهار الاغنية اللي انت مشغلها حاليا')
+        .setDescription
+        .addField('dz!play', 'لتشغيل اغنية')
+        .addField('dz!join', 'دخول رومك الصوتي')
+        .addField('dz!disconnect', 'الخروج من رومك الصوتي')
+        .addField('dz!skip', 'تخطي الأغنية')
+        .addField('dz!pause', 'ايقاف الاغنية مؤقتا')
+        .addField('dz!resume', 'تكملة الاغنية')
+        .addField('dz!queue', 'اظهار قائمة التشغيل')
+        .addField('dz!np', 'اظهار الاغنية اللي انت مشغلها حاليا')
 	.setFooter('============================================')
-        .addField('ghelp', 'اظهاراوامر العامة')
+        .addField('dz!ghelp', 'اظهاراوامر العامة')
         .setFooter('by : AbdouFERSAOUI_Dz 👻็็็็็็็็็#5217')
       message.channel.send(helpEmbed);
     }
@@ -351,7 +351,7 @@ client.on('ready', () => {
       console.log(`ON ${client.guilds.size} Servers '     Script By : EX Clan ' `);
     console.log(`----------------`);
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`dz!help music ,`,"https://www.facebook.com/abdouFERSAOUI.20")
+client.user.setGame(`dz!help  music ,`,"https://www.twitch.tv/abdoufersaoui_Dz")
 client.user.setStatus("Dz")
 });
 
