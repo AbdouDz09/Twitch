@@ -401,4 +401,23 @@ if (message.content.startsWith(adminprefix + 'setavatar')) {//Toxic Codes
 }
 });//Toxic Codes
 
-client.login(process.env.BOT_TOKEN);
+ 
+client.on('message', msg => {
+
+    if (msg.content == 'dz!j') {
+        if (msg.member.voiceChannel) {
+
+     if (msg.member.voiceChannel.joinable) {
+         msg.member.voiceChannel.join().then(msg.react('white_check_mark'));
+     }
+    }
+}
+})
+client.on('ready', () => {
+    client.channels.get("32339805934059540").join(); 
+    });
+
+
+
+
+client.login(process.env.BOT_TOKEN)
