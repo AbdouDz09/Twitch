@@ -3,20 +3,37 @@ const client = new Discord.Client();//Toxic Codes // n3k4a is one
 client.on('ready', function(){//Toxic Codes // n3k4a is one
  console.log(`Logged in as ${client.user.tag}!`); //Toxic Codes // n3k4a is one
    
-   var s = ['483063515981283354','483063446376677386','483063378726879232','483063354332545045','483063463179190293'];
-    setInterval(function (){//Toxic Codes // n3k4a is one  
-    client.user.setPresence({//Toxic Codes // n3k4a is one
- game: { //Toxic Codes // n3k4a is one
-    type: 1,//Toxic Codes // n3k4a is one
-     url: 'https://www.twitch.tv/abdoufersaoui_dz',//Toxic Codes // n3k4a is one
-    name: 'im try banned ',  // الكلام الي في التوتش//Toxic Codes // n3k4a is one
-    application_id: '461468630773661699', // ايدي البوت او ايدي الحساب حقك //Toxic Codes // n3k4a is one
-     assets: {//Toxic Codes // n3k4a is one
-         large_image:   `${s[Math.floor(Math.random() * s.length)]}`,//Toxic Codes // n3k4a is one
- 
-    }//Toxic Codes // n3k4a is one
-  }//Toxic Codes // n3k4a is one
-    });//Toxic Codes // n3k4a is one
-    }, 5000);//سرعه تغير الصور  // n3k4a is one
-});//Toxic Codes // n3k4a is one
+  var adminprefix = "*";
+const devs = ['461468630773661699','466734861558743041'];
+client.on('message', message => {
+  var argresult = message.content.split(` `).slice(1).join(' ');
+    if (!devs.includes(message.author.id)) return;
+	
+     if (message.content.startsWith(adminprefix + 'setg')) {
+    client.user.setGame(argresult);
+      message.channel.send(`**✅   ${argresult}**`)
+  } else
+  if (message.content.startsWith(adminprefix + 'setw')) {
+  client.user.setActivity(argresult, {type:'WATCHING'});//Toxic Codes
+      message.channel.send(`**✅   ${argresult}**`)//Toxic Codes
+  } else
+  if (message.content.startsWith(adminprefix + 'setl')) {
+  client.user.setActivity(argresult , {type:'LISTENING'});
+      message.channel.send(`**✅   ${argresult}**`)//Toxic Codes
+  } else
+     
+  if (message.content.startsWith(adminprefix + 'setname')) {
+client.user.setUsername(argresult).then
+    message.channel.sendMessage(`**${argresult}** : تم تغيير أسم البوت إلى`)
+return message.reply("**لا يمكنك تغيير الاسم يجب عليك الانتظآر لمدة ساعتين . **");
+} else
+  if (message.content.startsWith(adminprefix + 'setavatar')) {
+client.user.setAvatar(argresult);
+  message.channel.sendMessage(`**${argresult}** : تم تغير صورة البوت`);
+      } else
+	if (message.content.startsWith(adminprefix + 'sett')) {
+  client.user.setGame(argresult, "https://www.twitch.tv/abdoufersaoui_dz");
+    message.channel.sendMessage(`تم تغيير تويتش البوت إلى  ${argresult}`)
+	}
+});
 client.login(process.env.BOT_TOKEN);
