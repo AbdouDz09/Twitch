@@ -10,13 +10,13 @@ client.on('ready', function(){//Toxic Codes // n3k4a is one
   status: 'dnd', 
  game: { 
     type: 1,
-    name: ' Dream !! ',
+    name: 'JockEr ??',
      url: 'https://www.twitch.tv/abdoufersaoui_dz',
-     state: `Is Coming`,
-    application_id: '461468630773661699',  
+     state: `Watching Amine !!`,
+    application_id: '452286474289676289',  
      assets: {
         small_text: ' Abdou 100% Dz ' ,
-        large_text: `Dream Server !! :)` },
+        large_text: `:! :)` },
     large_image:  `${large[Math.floor(Math.random() * large.length)]}`,
     small_image:   `${small[Math.floor(Math.random() * small.length)]}`,
     }
